@@ -1,0 +1,7 @@
+profiles::webserver_common::packages:
+  - rsync
+  - nc
+  - httpd
+  - unzip
+  - wget
+
