@@ -22,8 +22,10 @@ class jboss_standalone::install inherits jboss_standalone {
   exec {'installJboss':
     require	=> User['jboss'],
     user	=> 'jboss',
-    command	=> '/usr/bin/wget -q http://puppetmaster/repo/packages/jboss/as7/jboss-as-7.1.1.Final.zip -O /opt/jboss/jboss.zip && cd /opt/jboss && unzip jboss.zip && rm jboss.zip && ln -s jboss-as-7.1.1.Final as7-standalone',
+    command	=> '/usr/bin/wget -q http://puppetmaster/repo/packages/jboss/as7/jboss-as-7.1.1.Final.zip -O /opt/jboss/jboss.zip && cd /opt/jboss && unzip jboss.zip && rm -rf jboss.zip && ln -s jboss-as-7.1.1.Final as7-standalone',
+    unless	=> '/usr/bin/test -L /opt/jboss/as7-standalone' 
   }
+
 
 
 }

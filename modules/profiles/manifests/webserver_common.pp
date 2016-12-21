@@ -8,6 +8,6 @@ class profiles::webserver_common {
   Package { $packages :
     ensure => installed,
   }
-
+  include java
 
 }

@@ -4,4 +4,5 @@ profiles::webserver_common::packages:
   - httpd
   - unzip
   - wget
-
+java::dojava: 'true'
+java::javaversion: '1.7'
