@@ -4,5 +4,12 @@ profiles::webserver_common::packages:
   - httpd
   - unzip
   - wget
+  - vim-enhanced
 java::dojava: 'true'
 java::javaversion: '1.7'
+profiles::git_server::packages:
+  - curl
+  - openssh-server
+  - openssh-clients
+  - postfix
+  - cronie
